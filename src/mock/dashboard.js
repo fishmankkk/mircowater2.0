@@ -9,13 +9,13 @@ const Dashboard = Mock.mock({
   'sales|8': [
     {
       'name|+1': 2008,
-      'Clothes|200-500': 1,
-      'Food|180-400': 1,
-      'Electronics|300-550': 1,
+      '普通用户|200-500': 1,
+      'VIP用户|180-400': 1,
+      'VVIP用户|300-550': 1,
     },
   ],
   cpu: {
-    'usage|50-600': 1,
+    '已用|50-600': 1,
     space: 825,
     'cpu|40-90': 1,
     'data|20': [
@@ -26,48 +26,48 @@ const Dashboard = Mock.mock({
   },
   browser: [
     {
-      name: 'Google Chrome',
+      name: '现有客户活跃度',
       percent: 43.3,
       status: 1,
     },
     {
-      name: 'Mozilla Firefox',
+      name: '冰用户比例',
       percent: 33.4,
       status: 2,
     },
     {
-      name: 'Apple Safari',
+      name: '有交易用户比例',
       percent: 34.6,
       status: 3,
     },
     {
-      name: 'Internet Explorer',
+      name: 'VIP用户比例',
       percent: 12.3,
       status: 4,
     },
     {
-      name: 'Opera Mini',
+      name: '日均下降用户比例',
       percent: 3.3,
       status: 1,
     },
     {
-      name: 'Chromium',
+      name: '日增用户比例',
       percent: 2.53,
       status: 1,
     },
   ],
   user: {
-    name: 'zuiidea',
-    email: 'zuiiidea@.gmail.com',
+    name: '黄晓铿',
+    email: '609745278@.qq.com',
     sales: 3241,
     sold: 3556,
-    avatar: 'http://tva4.sinaimg.cn/crop.0.0.996.996.180/6ee6a3a3jw8f0ks5pk7btj20ro0rodi0.jpg',
+    avatar: '//hbimg.b0.upaiyun.com/97f48b014ab58165efeaca7493b802b6aad7358b48174-HRuAri_fw236',
   },
   'completed|12': [
     {
       'name|+1': 2008,
-      'Task complete|200-1000': 1,
-      'Cards Complete|200-1000': 1,
+      'VIP用户|200-1000': 1,
+      '普通用户|200-1000': 1,
     },
   ],
   'comments|5': [
@@ -95,31 +95,31 @@ const Dashboard = Mock.mock({
     },
   ],
   quote: {
-    name: 'Joho Doe',
-    title: 'Graphic Designer',
-    content: 'I\'m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can\'t handle me at my worst, then you sure as hell don\'t deserve me at my best.',
-    avatar: 'http://img.hb.aicdn.com/bc442cf0cc6f7940dcc567e465048d1a8d634493198c4-sPx5BR_fw236',
+    name: 'fishman',
+    title: 'micro water',
+    content: '花瓣网, 设计师寻找灵感的天堂!图片素材领导者,帮你采集,发现网络上你喜欢的事物.你可以用它收集灵感,保存有用的素材,计划旅行,晒晒自己想要的东西',
+    avatar: '//hbimg.b0.upaiyun.com/72f19a235b072a8d790baf05e5bc61da896734061bafb-k6sxcn_sq320',
   },
   numbers: [
     {
       icon: 'pay-circle-o',
       color: color.green,
-      title: 'Online Review',
+      title: '剩余金额',
       number: 2781,
     }, {
       icon: 'team',
       color: color.blue,
-      title: 'New Customers',
-      number: 3241,
+      title: '发送人数',
+      number: 241,
     }, {
       icon: 'message',
       color: color.purple,
-      title: 'Active Projects',
-      number: 253,
+      title: '发送条数',
+      number: 3253,
     }, {
       icon: 'shopping-cart',
       color: color.red,
-      title: 'Referrals',
+      title: '购物车',
       number: 4324,
     },
   ],

@@ -53,8 +53,8 @@ const adminUsers = [
     permissions: userPermission.ADMIN,
   }, {
     id: 1,
-    username: 'guest',
-    password: 'guest',
+    username: 'hxk',
+    password: 'hxk',
     permissions: userPermission.DEFAULT,
   }, {
     id: 2,

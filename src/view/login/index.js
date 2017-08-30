@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'dva'
 import { Button, Row, Form, Input } from 'antd'
 import { config } from 'utils'
+import './../../gobal'
 import styles from './index.less'
 
 const FormItem = Form.Item
@@ -38,26 +39,23 @@ const Login = ({
             rules: [
               {
                 required: true,
+                message: '请输入帐号',
               },
             ],
-          })(<Input size="large" onPressEnter={handleOk} placeholder="Username" />)}
+          })(<Input size="large" onPressEnter={handleOk} placeholder="用户名" />)}
         </FormItem>
         <FormItem hasFeedback>
           {getFieldDecorator('password', {
-            rules: [
-              {
-                required: true,
-              },
-            ],
-          })(<Input size="large" type="password" onPressEnter={handleOk} placeholder="Password" />)}
+            rules: [{ type: 'string', required: true, message: '请正确填写密码' }],
+          })(<Input size="large" type="password" onPressEnter={handleOk} placeholder="密码" />)}
         </FormItem>
         <Row>
           <Button type="primary" size="large" onClick={handleOk} loading={loginLoading}>
-            Sign in
+            登录
           </Button>
           <p>
-            <span>Username：guest</span>
-            <span>Password：guest</span>
+            <span>Username：hxk</span>
+            <span>Password：hxk</span>
           </p>
         </Row>
 

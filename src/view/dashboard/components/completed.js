@@ -8,7 +8,7 @@ import styles from './completed.less'
 function Completed ({ data }) {
   return (
     <div className={styles.sales}>
-      <div className={styles.title}>TEAM TOTAL COMPLETED</div>
+      <div className={styles.title}>客户人员日报</div>
       <ResponsiveContainer minHeight={360}>
         <AreaChart data={data}>
           <Legend verticalAlign="top"
@@ -29,8 +29,8 @@ function Completed ({ data }) {
               return <div className={styles.tooltip}><p className={styles.tiptitle}>{content.label}</p><ul>{list}</ul></div>
             }}
           />
-          <Area type="monotone" dataKey="Task complete" stroke={color.grass} fill={color.grass} strokeWidth={2} dot={{ fill: '#fff' }} activeDot={{ r: 5, fill: '#fff', stroke: color.green }} />
-          <Area type="monotone" dataKey="Cards Complete" stroke={color.sky} fill={color.sky} strokeWidth={2} dot={{ fill: '#fff' }} activeDot={{ r: 5, fill: '#fff', stroke: color.blue }} />
+          <Area type="monotone" dataKey="VIP用户" stroke={color.grass} fill={color.grass} strokeWidth={2} dot={{ fill: '#fff' }} activeDot={{ r: 5, fill: '#fff', stroke: color.green }} />
+          <Area type="monotone" dataKey="普通用户" stroke={color.sky} fill={color.sky} strokeWidth={2} dot={{ fill: '#fff' }} activeDot={{ r: 5, fill: '#fff', stroke: color.blue }} />
         </AreaChart>
       </ResponsiveContainer>
     </div>
