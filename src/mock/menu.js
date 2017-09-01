@@ -16,6 +16,20 @@ let database = [
     route: '/user',
   },
   {
+    id: '3',
+    bpid: '1',
+    name: '组件库',
+    icon: 'shop',
+  },
+  {
+    id: '31',
+    bpid: '3',
+    mpid: '3',
+    name: '按钮',
+    icon: 'heart-o',
+    route: '/component/button',
+  },
+  {
     id: '7',
     bpid: '1',
     name: '关于我',
@@ -30,7 +44,7 @@ let database = [
     route: '/user/:id',
   },
   {
-    id: '3',
+    id: '8',
     bpid: '1',
     name: '请求',
     icon: 'api',

@@ -46,12 +46,27 @@ const Routers = function ({ history, app }) {
             }, 'user-detail')
           },
         }, {
+          path: 'component/button',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/component/button/'))
+            }, 'component-button')
+          },
+        }, {
+          path: 'login1',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              registerModel(app, require('view/login1/model/index'))
+              cb(null, require('view/login1/'))
+            }, 'login')
+          },
+        }, {
           path: 'login',
           getComponent (nextState, cb) {
             require.ensure([], (require) => {
               registerModel(app, require('models/login'))
               cb(null, require('view/login/'))
-            }, 'login')
+            }, 'login1')
           },
         }, {
           path: 'request',

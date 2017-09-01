@@ -1,8 +1,8 @@
-import config from '../config';
-import { getCookie, delCookie } from 'util/helper';
+import config from '../config'
+import { getCookie, delCookie } from 'util/helper'
 
 // Auth
-export function getAuthHeader(sso_token) {
+export function getAuthHeader (sso_token) {
   return ({
     headers: {
       'Accept': 'application/json',
@@ -12,23 +12,23 @@ export function getAuthHeader(sso_token) {
   });
 }
 
-export function redirectLogin() {
-  localStorage.clear();
-  window.location.href = config.redirectUrl + window.location.origin;
+export function redirectLogin () {
+  localStorage.clear()
+  window.location.href = config.redirectUrl + window.location.origin
 }
 
-export function authenticated() {
-  const sso_token = getCookie('sso_token');
+export function authenticated () {
+  const sso_token = getCookie('sso_token')
   if (!sso_token) {
-    redirectLogin();
+    redirectLogin()
   }
 }
 
-export function logOut() {
+export function logOut () {
   delCookie({
     name: 'sso_token',
     path: '/',
     domain: '.corp.visiondk.com',
-  });
-  authenticated();
+  })
+  authenticated()
 }
