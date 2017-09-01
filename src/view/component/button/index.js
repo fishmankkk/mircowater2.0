@@ -68,6 +68,9 @@ class App extends React.Component {
               <p className="m_water_font-b">大</p>
               <p className="">普通</p>
               <p className="m_water_font-s">小</p>
+              <p className="m_water_font-b">大</p>
+              <p className="">普通</p>
+              <p className="m_water_font-s">小</p>
             </Card>
           </Col>
         </Row>
