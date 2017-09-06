@@ -10,7 +10,8 @@
     "space-before-function-paren": [2, "always"],
     "no-unused-expressions": [0, {
       "allowShortCircuit": true,
-      "allowTernary": true
+      "allowTernary": true,
+      "allowForLoopAfterthoughts": true
     }],
     "arrow-body-style": [0, "never"],
     "func-names": 0,

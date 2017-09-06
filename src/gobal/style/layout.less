@@ -1,11 +1,15 @@
+// 本文件是对 布局:
+// sm 小 md 中 lg 大
+// 相应变量值的覆盖
 @import "~gobal/style/style_vars";
 :global {
-  .height-100{
+  .m_water_height-100{
     height:@100;
   }
   .m_water_width-100{
     width:@100;
   }
+// flex布局
   .m_water_flex{
     display: flex;
   }
@@ -22,15 +26,104 @@
     display: flex;
     align-items: center;
   } 
-  .trigger {
-    font-size: 18px;
-    line-height: 64px;
-    padding: 0 16px;
-    cursor: pointer;
-    transition: color .3s;
+// all marign
+  .m_water_margin-sm{             
+    margin: @space-1;
   }
-
-  .trigger:hover {
-    color: #108ee9;
+  .m_water_margin-md{
+    margin: @space-2;
+  }
+  .m_water_margin-lg{
+    margin: @space-3;
+  }
+// left marign
+  .m_water_margin-sm-l{             
+    margin-left: @space-1;
+  }
+  .m_water_margin-md-l{
+    margin-left: @space-2;
+  }
+  .m_water_margin-lg-l{
+    margin-left: @space-3;
+  }
+// right marign
+  .m_water_margin-sm-r{             
+    margin-right: @space-1;
+  }
+  .m_water_margin-md-r{
+    margin-right: @space-2;
+  }
+  .m_water_margin-lg-r{
+    margin-right: @space-3;
+  }
+// top marign
+  .m_water_margin-sm-t{             
+    margin-top: @space-1;
+  }
+  .m_water_margin-md-t{
+    margin-top: @space-2;
+  }
+  .m_water_margin-lg-t{
+    margin-top: @space-3;
+  }
+// bottom marign
+  .m_water_margin-sm-b{             
+    margin-bottom: @space-1;
+  }
+  .m_water_margin-md-b{
+    margin-bottom: @space-2;
+  }
+  .m_water_margin-lg-b{
+    margin-bottom: @space-3;
+  }
+// all padding
+  .m_water_padding-sm{
+    padding: @space-1;
+  }
+  .m_water_padding-md{
+    padding: @space-2;
+  }
+  .m_water_padding-lg{
+    padding: @space-3;
+  }
+// left padding
+  .m_water_padding-sm-l{
+    padding-left: @space-1;
+  }
+  .m_water_padding-md-l{
+    padding-left: @space-2;
+  }
+  .m_water_padding-lg-l{
+    padding-left: @space-3;
+  }
+// right padding
+  .m_water_padding-sm-r{
+    padding-right: @space-1;
+  }
+  .m_water_padding-md-r{
+    padding-right: @space-2;
+  }
+  .m_water_padding-lg-r{
+    padding-right: @space-3;
+  }
+// top padding
+  .m_water_padding-sm-t{
+    padding-top: @space-1;
+  }
+  .m_water_padding-md-t{
+    padding-top: @space-2;
+  }
+  .m_water_padding-lg-t{
+    padding-top: @space-3;
+  }
+// bottom padding
+  .m_water_padding-sm-b{
+    padding-bottom: @space-1;
+  }
+  .m_water_padding-md-b{
+    padding-bottom: @space-2;
+  }
+  .m_water_padding-lg-b{
+    padding-bottom: @space-3;
   }
 }

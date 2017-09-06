@@ -46,11 +46,46 @@ const Routers = function ({ history, app }) {
             }, 'user-detail')
           },
         }, {
-          path: 'component/button',
+          path: 'component/base',
           getComponent (nextState, cb) {
             require.ensure([], (require) => {
-              cb(null, require('view/component/button/'))
-            }, 'component-button')
+              cb(null, require('view/component/base/'))
+            }, 'component-base')
+          },
+        }, {
+          path: 'component/form',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/component/form/'))
+            }, 'component-form')
+          },
+        }, {
+          path: 'component/base-expand',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/component/base-expand/'))
+            }, 'component-base-expand')
+          },
+        }, {
+          path: 'component/base-expand2',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/component/base-expand2/'))
+            }, 'component-base-expand2')
+          },
+        }, {
+          path: 'component/table1',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/component/table/table1'))
+            }, 'component-table1')
+          },
+        }, {
+          path: 'component/table2',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/component/table//table2'))
+            }, 'component-table2')
           },
         }, {
           path: 'login1',
