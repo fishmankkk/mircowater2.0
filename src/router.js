@@ -74,6 +74,13 @@ const Routers = function ({ history, app }) {
             }, 'component-base-expand2')
           },
         }, {
+          path: 'codeRules/codeCss',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              cb(null, require('view/codeRules/codeCss/'))
+            }, 'codeRules-codeCss')
+          },
+        }, {
           path: 'component/table1',
           getComponent (nextState, cb) {
             require.ensure([], (require) => {

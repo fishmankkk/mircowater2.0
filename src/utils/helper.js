@@ -1,17 +1,17 @@
 // Replace Status text
-export function getUserStatus(status) {
+export function getUserStatus (status) {
   if (status === 1) {
-    return { status: 'success', text: '正常' };
+    return { status: 'success', text: '正常' }
   } else {
-    return { status: 'default', text: '禁用' };
+    return { status: 'default', text: '禁用' }
   }
 }
 
 export function getIsAdminStatus(status) {
   if (status === 1) {
-    return { status: 'success', text: '是' };
+    return { status: 'success', text: '是' }
   } else {
-    return { status: 'default', text: '否' };
+    return { status: 'default', text: '否' }
   }
 }
 

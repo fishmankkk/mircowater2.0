@@ -10,8 +10,7 @@
     "space-before-function-paren": [2, "always"],
     "no-unused-expressions": [0, {
       "allowShortCircuit": true,
-      "allowTernary": true,
-      "allowForLoopAfterthoughts": true
+      "allowTernary": true
     }],
     "arrow-body-style": [0, "never"],
     "func-names": 0,
@@ -22,6 +21,7 @@
     "no-eval": 0,
     "no-continue": 0,
     "react/jsx-no-bind": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-unused-vars": [2, { "ignoreRestSiblings": true }],
     "no-underscore-dangle": 0,
     "global-require": 0,

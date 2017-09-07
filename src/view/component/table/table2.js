@@ -78,7 +78,7 @@ function NestedTable () {
         date: '2014-12-24 23:12:00',
         name: 'This is production name',
         upgradeNum: 'Upgraded: 56',
-      });
+      })
     }
     return (
       <Table

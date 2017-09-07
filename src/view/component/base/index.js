@@ -102,7 +102,7 @@ class App extends React.Component {
   render () {
     const { size } = this.state
     return (
-      <div className="content-inner">
+      <div className="">
         <Row gutter={32}>
           <Col lg={8} md={12}>
             <Card title="普通按钮">

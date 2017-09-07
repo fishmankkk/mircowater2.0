@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Card, Tree, Alert, Modal, Button, message, notification, Progress, Spin, Popconfirm, BackTop } from 'antd'
+import { Row, Col, Card, Tree, Alert, Modal, Button, message, notification, Progress, Spin, Popconfirm } from 'antd'
 import 'gobal'
 
 const TreeNode = Tree.TreeNode
@@ -98,10 +98,10 @@ function showDeleteConfirm () {
 }
 class App extends React.Component {
   state = { visible: false }
-  onSelect = (selectedKeys, info) => {
+  onSelect = (selectedKeys) => {
     console.log('selected', selectedKeys, info)
   }
-  onCheck = (checkedKeys, info) => {
+  onCheck = (checkedKeys) => {
     console.log('onCheck', checkedKeys, info)
   }
   showModal = () => {
