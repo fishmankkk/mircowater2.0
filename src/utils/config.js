@@ -1,5 +1,6 @@
 const APIV1 = '/api/v1'
 const APIV2 = '/api/v2'
+const PROXYAPI = 'proxyapi'
 
 module.exports = {
   name: 'microwater',
@@ -25,5 +26,7 @@ module.exports = {
     weather: `${APIV1}/weather`,
     v1test: `${APIV1}/test`,
     v2test: `${APIV2}/test`,
+    testapi: `${PROXYAPI}/mock/59004d56739ac1685205e4e8/microwater/proxy`,
+    mockapi: `${PROXYAPI}/mock/59004d56739ac1685205e4e8/microwater/mock`,
   },
 }

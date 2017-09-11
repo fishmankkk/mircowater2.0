@@ -24,6 +24,11 @@ export default {
     //   "changeOrigin": true,
     //   "pathRewrite": { "^/api/v2" : "/api/v2" }
     // }
+    "/proxyapi": {
+      "target": "http://www.easy-mock.com/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/proxyapi" : "/" }
+    }
   },
   env : {
     development: {

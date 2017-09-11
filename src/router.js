@@ -95,12 +95,12 @@ const Routers = function ({ history, app }) {
             }, 'component-table2')
           },
         }, {
-          path: 'login1',
+          path: 'testapi',
           getComponent (nextState, cb) {
             require.ensure([], (require) => {
-              registerModel(app, require('view/login1/model/index'))
-              cb(null, require('view/login1/'))
-            }, 'login')
+              registerModel(app, require('models/testapi'))
+              cb(null, require('view/testapi/'))
+            }, 'testapi')
           },
         }, {
           path: 'login',

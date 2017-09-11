@@ -8,12 +8,19 @@ let database = [
     name: '工作台',
     route: '/dashboard',
   },
+  // {
+  //   id: '2',
+  //   bpid: '1',
+  //   name: '短信管理',
+  //   icon: 'user',
+  //   route: '/user',
+  // },
   {
     id: '2',
     bpid: '1',
-    name: '短信管理',
-    icon: 'user',
-    route: '/user',
+    name: '接口测试',
+    icon: 'api',
+    route: '/testapi',
   },
   {
     id: '3',
