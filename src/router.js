@@ -108,7 +108,15 @@ const Routers = function ({ history, app }) {
             require.ensure([], (require) => {
               registerModel(app, require('models/login'))
               cb(null, require('view/login/'))
-            }, 'login1')
+            }, 'login')
+          },
+        }, {
+          path: 'logout',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              registerModel(app, require('models/logout'))
+              cb(null, require('view/logout/'))
+            }, 'logout')
           },
         }, {
           path: 'request',

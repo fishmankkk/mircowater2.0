@@ -20,7 +20,7 @@ const App = ({ children, dispatch, app, loading, location }) => {
   const { user, siderFold, darkTheme, isNavbar, menuPopoverVisible, navOpenKeys, menu, permissions } = app
   let { pathname } = location
   pathname = pathname.startsWith('/') ? pathname : `/${pathname}`
-  const { iconFontJS, iconFontCSS, logo } = config
+  const { iconFontJS, iconFontCSS, logoicon } = config
   const current = menu.filter(item => pathToRegexp(item.route || '').exec(pathname))
   const hasPermission = current.length ? permissions.visit.includes(current[0].id) : false
   const href = window.location.href
@@ -82,7 +82,7 @@ const App = ({ children, dispatch, app, loading, location }) => {
       <Helmet>
         <title>MICROWATER</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href={logo} type="image/x-icon" />
+        <link rel="icon" href={logoicon} type="image/x-icon" />
         {iconFontJS && <script src={iconFontJS} />}
         {iconFontCSS && <link rel="stylesheet" href={iconFontCSS} />}
       </Helmet>

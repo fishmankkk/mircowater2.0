@@ -5,7 +5,7 @@ import { routerRedux } from 'dva/router'
 import { parse } from 'qs'
 import config from 'config'
 import { EnumRoleType } from 'enums'
-import { query, logout } from 'services/app'
+import { query, signout } from 'services/app'
 import * as menusService from 'services/menus'
 
 const { prefix } = config
@@ -87,7 +87,7 @@ export default {
     * logout ({
       payload,
     }, { call, put }) {
-      const data = yield call(logout, parse(payload))
+      const data = yield call(signout, parse(payload))
       if (data.success) {
         yield put({ type: 'query' })
       } else {

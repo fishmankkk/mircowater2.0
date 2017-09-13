@@ -26,6 +26,7 @@
     "no-underscore-dangle": 0,
     "global-require": 0,
     "import/no-unresolved": 0,
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": 0,
     "import/extensions": 0,
     "jsx-a11y/href-no-hash": 0,
     "react/no-array-index-key": 0,

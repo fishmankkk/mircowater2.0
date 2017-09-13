@@ -1,15 +1,16 @@
 import { routerRedux } from 'dva/router'
 import { queryURL } from 'utils'
-import { login } from 'services/login'
+import { login } from 'services/logout'
 
 export default {
-  namespace: 'login',
+  namespace: 'logout',
   state: {
     loginLoading: false,
+    confirmDirty: false,
   },
 
   effects: {
-    * login ({
+    * logout ({
       payload,
     }, { put, call }) {
       yield put({ type: 'showLoginLoading' })
@@ -24,15 +25,15 @@ export default {
           yield put(routerRedux.push('/dashboard'))
         }
       } else {
-        throw new Error('登录失败')
+        throw new Error('注册失败')
       }
     },
 
-    * goLogout ({
+    * goLogin ({
       payload,
-    }, { put }) {
+    }, { call }) {
       console.log(payload)
-      yield put(routerRedux.push('/logout'))
+      yield call(routerRedux.push('/'))
     },
   },
   reducers: {
