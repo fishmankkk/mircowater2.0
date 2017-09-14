@@ -30,6 +30,22 @@ const Routers = function ({ history, app }) {
             }, 'dashboard')
           },
         }, {
+          path: 'sms/sms-signature',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              // registerModel(app, require('models/user'))
+              cb(null, require('view/sms/sms-signature/'))
+            }, 'sms-signature')
+          },
+        }, {
+          path: 'sms/sms-account',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              // registerModel(app, require('models/user'))
+              cb(null, require('view/sms/sms-account/'))
+            }, 'sms-account')
+          },
+        }, {
           path: 'user',
           getComponent (nextState, cb) {
             require.ensure([], (require) => {

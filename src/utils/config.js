@@ -5,7 +5,7 @@ const PROXYAPI = 'proxyapi'
 module.exports = {
   name: 'microwater',
   prefix: 'antdAdmin',
-  footerText: 'Ant Design Admin  © 2017 zuiidea',
+  footerText: 'MICROWATER  © 2017 fishman',
   logo: '/logo.png',
   logoicon: 'favicon.ico',
   iconFontCSS: '/iconfont.css',

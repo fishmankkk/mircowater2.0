@@ -34,7 +34,8 @@ const EnumRoleType = {
 
 const userPermission = {
   DEFAULT: {
-    visit: ['1', '2', '21', '7', '5', '51', '52', '53'],
+    // visit: ['1', '2', '21', '22', '7', '5', '51', '52', '53'],
+    visit: ['dashboard', 'sms', 'sms-signature', 'sms-account', 'component-lib', 'component-base', 'component-form', 'component-base-expand', 'codeRules'],
     role: EnumRoleType.DEFAULT,
   },
   ADMIN: {
@@ -107,7 +108,7 @@ module.exports = {
     }
   },
 
-  [`GET ${apiPrefix}/user/logout`] (req, res) {
+  [`GET ${apiPrefix}/user/signout`] (req, res) {
     res.clearCookie('token')
     res.status(200).end()
   },

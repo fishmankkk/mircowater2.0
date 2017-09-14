@@ -5,7 +5,7 @@ import { routerRedux } from 'dva/router'
 import { parse } from 'qs'
 import config from 'config'
 import { EnumRoleType } from 'enums'
-import { query, signout } from 'services/app'
+import { query, signoutApi } from 'services/app'
 import * as menusService from 'services/menus'
 
 const { prefix } = config
@@ -58,6 +58,16 @@ export default {
         if (permissions.role === EnumRoleType.ADMIN || permissions.role === EnumRoleType.DEVELOPER) {
           permissions.visit = list.map(item => item.id)
         } else {
+          let changeKeyList = []
+          permissions.visit.forEach((value) => {
+            let visitValue = value
+            menu.forEach((item) => {
+              if (item.key === visitValue) {
+                changeKeyList.push(item.id)
+              }
+            })
+          })
+          permissions.visit = Array.from(new Set(changeKeyList))
           menu = list.filter((item) => {
             const cases = [
               permissions.visit.includes(item.id),
@@ -87,7 +97,7 @@ export default {
     * logout ({
       payload,
     }, { call, put }) {
-      const data = yield call(signout, parse(payload))
+      const data = yield call(signoutApi, parse(payload))
       if (data.success) {
         yield put({ type: 'query' })
       } else {

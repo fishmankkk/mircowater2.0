@@ -41,7 +41,7 @@ const Login = ({
         </Row>
         <Row type="flex" justify="center">
           <Col span={6}>
-            <h2 className="m_water_f-keyword m_water_margin-lg">注册</h2>
+            <h2 className="m_water_f-keyword m_water_margin-lg">登录</h2>
           </Col>
         </Row>
         <form>
