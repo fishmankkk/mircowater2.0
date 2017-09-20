@@ -24,6 +24,7 @@ module.exports = {
     posts: `${APIV1}/posts`,
     user: `${APIV1}/user/:id`,
     dashboard: `${APIV1}/dashboard`,
+    smsDashboard: `${APIV1}/sms-dashboard`,
     menus: `${APIV1}/menus`,
     weather: `${APIV1}/weather`,
     v1test: `${APIV1}/test`,

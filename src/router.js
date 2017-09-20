@@ -46,6 +46,14 @@ const Routers = function ({ history, app }) {
             }, 'sms-account')
           },
         }, {
+          path: 'sms/sms-dashboard',
+          getComponent (nextState, cb) {
+            require.ensure([], (require) => {
+              registerModel(app, require('models/sms-dashboard'))
+              cb(null, require('view/sms/sms-dashboard/'))
+            }, 'sms-dashboard')
+          },
+        }, {
           path: 'user',
           getComponent (nextState, cb) {
             require.ensure([], (require) => {

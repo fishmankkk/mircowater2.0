@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/view/login/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/view/login</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React <span class="cstat-no" title="statement not covered" >from 'react'<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+import PropTypes <span class="cstat-no" title="statement not covered" >from 'prop-types'<span class="cstat-no" title="statement not covered" ></span></span>
+import { co<span class="cstat-no" title="statement not covered" >nnect } from 'd</span>va'
+import { But<span class="cstat-no" title="statement not covered" >ton, Row, Col, F</span>orm, Input, Card } from 'antd'
+import { conf<span class="cstat-no" title="statement not covered" >ig } from 'utils'</span>
+<span class="cstat-no" title="statement not covered" >import 'gobal'<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+&nbsp;
+const FormItem <span class="cstat-no" title="statement not covered" >= Form.Item</span>
+&nbsp;
+const Login <span class="cstat-no" title="statement not covered" >= ({<span class="fstat-no" title="function not covered" ></span></span>
+  login,
+  dispatch,
+  form: {
+    getFieldDecorator,
+    validateFieldsAndScroll,
+  },
+}) =&gt; {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span>
+  const { loginLo<span class="cstat-no" title="statement not covered" >ading } = login</span>
+&nbsp;
+  function <span class="fstat-no" title="function not covered" >handleOk </span>() {
+<span class="cstat-no" title="statement not covered" >    validateFieldsAndScroll(<span class="fstat-no" title="function not covered" >(e</span>rrors, values) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (errors) {</span>
+<span class="cstat-no" title="statement not covered" >        return</span>
+      }
+<span class="cstat-no" title="statement not covered" >      dispatch({ type: 'login/login', payload: values })</span>
+    })
+  }
+  function <span class="fstat-no" title="function not covered" >gotoLogout </span>() {
+<span class="cstat-no" title="statement not covered" >    dispatch({ type: 'login/goLogout' })</span>
+  }
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;Row type="flex" justify="center" align="middle" className="m_water_p-a m_water_height-100 m_water_width-100"&gt;
+      &lt;Card className="m_water_width-center m_water_flex-center m_water_flex"&gt;
+        &lt;Row type="flex" align="top"&gt;
+          &lt;Col span={2}&gt;
+            &lt;img alt={'logo'} src={config.logo} className="m_water_width-100" /&gt;
+          &lt;/Col&gt;
+          &lt;Col span={19}&gt;
+            &lt;h3 className="m_water_f-keyword m_water_fc-blue"&gt;{config.name}&lt;/h3&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Row type="flex" justify="center"&gt;
+          &lt;Col span={6}&gt;
+            &lt;h2 className="m_water_f-keyword m_water_margin-lg"&gt;登录&lt;/h2&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;form&gt;
+          &lt;FormItem hasFeedback&gt;
+            {getFieldDecorator('username', {
+              rules: [
+                {
+                  required: true,
+                  message: '请输入帐号',
+                },
+              ],
+            })(&lt;Input size="large" onPressEnter={handleOk} placeholder="用户名" /&gt;)}
+          &lt;/FormItem&gt;
+          &lt;FormItem hasFeedback&gt;
+            {getFieldDecorator('password', {
+              rules: [{ type: 'string', required: true, message: '请正确填写密码' }],
+            })(&lt;Input size="large" type="password" onPressEnter={handleOk} placeholder="密码" /&gt;)}
+          &lt;/FormItem&gt;
+          &lt;Row&gt;
+            &lt;Button className="m_water_width-100 m_water_margin-none" type="primary" size="large" onClick={handleOk} loading={loginLoading}&gt;
+              登录
+            &lt;/Button&gt;
+            &lt;p className="m_water_flex m_water_flex-right m_water_cusor-point" onClick={gotoLogout} role="button"&gt;我要注册？&lt;/p&gt;
+            &lt;Row type="flex" justify="space-around"&gt;
+              &lt;Col span={12}&gt;Username：hxk&lt;/Col&gt;
+              &lt;Col span={12} className="m_water_width-right"&gt;Password：hxk&lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/Row&gt;
+&nbsp;
+        &lt;/form&gt;
+      &lt;/Card&gt;
+    &lt;/Row&gt;
+  )
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >Login.propTypes = {</span>
+  form: PropTypes.object,
+  login: PropTypes.object,
+  dispatch: PropTypes.func,<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+export default con<span class="fstat-no" title="function not covered" >ne</span>ct(({ login }) =&gt; ({ login }<span class="cstat-no" title="statement not covered" >))(Form.crea<span class="cstat-no" title="statement not covered" ></span>te()(Login))</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 15 2017 15:08:56 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

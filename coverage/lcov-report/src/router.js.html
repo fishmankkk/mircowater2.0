@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/router.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\prettify.css" />
+    <link rel="stylesheet" href="..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\index.html">All files</a> / <a href="index.html">src</a> router.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/84</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/76</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React <span class="cstat-no" title="statement not covered" >from 'react'<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+import PropTypes <span class="cstat-no" title="statement not covered" >from 'prop-types'<span class="cstat-no" title="statement not covered" ></span></span>
+import { Route<span class="cstat-no" title="statement not covered" >r } from 'dva/router'</span>
+import App <span class="cstat-no" title="statement not covered" >from 'view/app'<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+&nbsp;
+const registerModel <span class="cstat-no" title="statement not covered" >= (app, m<span class="fstat-no" title="function not covered" >odel) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >  if (!(app._models.filter(<span class="fstat-no" title="function not covered" >m </span>=&gt; m.namespa<span class="cstat-no" title="statement not covered" >ce === model.namespace).length === 1)) {</span></span>
+<span class="cstat-no" title="statement not covered" >    app.model(model)</span>
+  }
+}
+&nbsp;
+const Routers <span class="cstat-no" title="statement not covered" >= functio<span class="fstat-no" title="function not covered" >n ({ his</span>tory, app }) {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+  const routes <span class="cstat-no" title="statement not covered" >= [</span>
+    {
+      path: '/',
+      component: App,
+      getIndexRoute (nextSta<span class="fstat-no" title="function not covered" >te, cb) {</span>
+<span class="cstat-no" title="statement not covered" >        require.ensure([]<span class="fstat-no" title="function not covered" >, </span>(require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          registerModel(app, require('models/dashboard'))</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, { component: require('view/dashboard/') })</span>
+        }, 'dashboard')
+      },
+      childRoutes: [
+        {
+          path: 'dashboard',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/dashboard'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/dashboard/'</span>))
+            }, 'dashboard')
+          },
+        }, {
+          path: 'sms/sms-signature',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+              // registerModel(app, require('models/user'))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/sms/sms-signature/'</span>))
+            }, 'sms-signature')
+          },
+        }, {
+          path: 'sms/sms-account',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+              // registerModel(app, require('models/user'))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/sms/sms-account/'</span>))
+            }, 'sms-account')
+          },
+        }, {
+          path: 'user',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/user'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/user/'</span>))
+            }, 'user')
+          },
+        }, {
+          path: 'user/:id',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/user/detail'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/user/detail/'</span>))
+            }, 'user-detail')
+          },
+        }, {
+          path: 'component/base',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/component/base/'</span>))
+            }, 'component-base')
+          },
+        }, {
+          path: 'component/form',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/component/form/'</span>))
+            }, 'component-form')
+          },
+        }, {
+          path: 'component/base-expand',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/component/base-expand/'</span>))
+            }, 'component-base-expand')
+          },
+        }, {
+          path: 'component/base-expand2',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/component/base-expand2/'</span>))
+            }, 'component-base-expand2')
+          },
+        }, {
+          path: 'codeRules/codeCss',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/codeRules/codeCss/'</span>))
+            }, 'codeRules-codeCss')
+          },
+        }, {
+          path: 'component/table1',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/component/table/table1'</span>))
+            }, 'component-table1')
+          },
+        }, {
+          path: 'component/table2',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/component/table//table2'</span>))
+            }, 'component-table2')
+          },
+        }, {
+          path: 'testapi',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/testapi'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/testapi/'</span>))
+            }, 'testapi')
+          },
+        }, {
+          path: 'login',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/login'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/login/'</span>))
+            }, 'login')
+          },
+        }, {
+          path: 'logout',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/logout'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/logout/'</span>))
+            }, 'logout')
+          },
+        }, {
+          path: 'request',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/request/'</span>))
+            }, 'request')
+          },
+        }, {
+          path: 'UIElement/iconfont',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/UIElement/iconfont/'</span>))
+            }, 'UIElement-iconfont')
+          },
+        }, {
+          path: 'UIElement/search',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/UIElement/search/'</span>))
+            }, 'UIElement-search')
+          },
+        }, {
+          path: 'UIElement/dropOption',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/UIElement/dropOption/'</span>))
+            }, 'UIElement-dropOption')
+          },
+        }, {
+          path: 'UIElement/layer',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/UIElement/layer/'</span>))
+            }, 'UIElement-layer')
+          },
+        }, {
+          path: 'UIElement/dataTable',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/UIElement/dataTable/'</span>))
+            }, 'UIElement-dataTable')
+          },
+        }, {
+          path: 'UIElement/editor',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/UIElement/editor/'</span>))
+            }, 'UIElement-editor')
+          },
+        }, {
+          path: 'chart/lineChart',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/chart/lineChart/'</span>))
+            }, 'chart-lineChart')
+          },
+        }, {
+          path: 'chart/barChart',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/chart/barChart/'</span>))
+            }, 'chart-barChart')
+          },
+        }, {
+          path: 'chart/areaChart',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/chart/areaChart/'</span>))
+            }, 'chart-areaChart')
+          },
+        }, {
+          path: 'post',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              registerModel(app, require('models/post'</span>))
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/post/'</span>))
+            }, 'post')
+          },
+        }, {
+          path: '*',
+          getComponent (nextS<span class="fstat-no" title="function not covered" >tate, cb) {</span>
+<span class="cstat-no" title="statement not covered" >            require.ensure(<span class="fstat-no" title="function not covered" >[]</span>, (require) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              cb(null, require('view/error/'</span>))
+            }, 'error')
+          },
+        },
+      ],
+    },
+  ]
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return &lt;Router history={history} routes={routes} /&gt;</span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >Routers.propTypes = {</span>
+  history: PropTypes.object,
+  app: PropTypes.object,<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+export default Routers
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 15 2017 15:08:56 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\sorter.js"></script>
+</body>
+</html>

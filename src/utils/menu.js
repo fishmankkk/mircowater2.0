@@ -11,6 +11,12 @@ let menuLists = [
     key: 'sms',
     children: [
       {
+        text: '短信工作台',
+        icon: 'laptop',
+        key: 'sms-dashboard',
+        route: '/sms/sms-dashboard',
+      },
+      {
         text: '签名管理',
         icon: 'edit',
         key: 'sms-signature',

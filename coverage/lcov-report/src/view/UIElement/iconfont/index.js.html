@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/view/UIElement/iconfont/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/view/UIElement/iconfont</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React <span class="cstat-no" title="statement not covered" >from 'react'<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+import { Iconfont <span class="cstat-no" title="statement not covered" >} from 'components'</span>
+import { Tab<span class="cstat-no" title="statement not covered" >le, Row, Col, Ic</span>on } from 'antd'
+import styles<span class="cstat-no" title="statement not covered" > from './index.less'<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >import './emoji'<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+&nbsp;
+const colorfulIcons <span class="cstat-no" title="statement not covered" >= ['boluo', 'baixiangguo', 'chengzi', 'boluomei', 'caomei', 'dayouzi', 'chelizi', 'fanqie', 'hamigua', 'ganlan',</span>
+  'juzi', 'heimei', 'huolongguo', 'hongmei', 'lizi', 'lanmei', 'mangguo', 'mihoutao', 'longyan', 'mugua', 'lizi1', 'ningmeng']
+&nbsp;
+const flatIcons <span class="cstat-no" title="statement not covered" >= ['home', 'user', 'timelimit', 'shopcart', 'message', 'remind', 'service', 'shop', 'sweep', 'express',</span>
+  'payment', 'search', 'feedback', 'pencil', 'setting', 'refund', 'delete', 'star', 'heart', 'share', 'location', 'console']
+&nbsp;
+const localSVGIcons <span class="cstat-no" title="statement not covered" >= ['vomiting', 'smirking', 'surprised', 'unamused', 'zombie', 'tired', 'tongue', 'wink'</span>]
+&nbsp;
+const localRequireSVGIcons <span class="cstat-no" title="statement not covered" >= [</span>
+  require('../../../svg/cute/congratulations.svg'),
+  require('../../../svg/cute/cry.svg'),
+  require('../../../svg/cute/kiss.svg'),
+  require('../../../svg/cute/leisurely.svg'),
+  require('../../../svg/cute/notice.svg'),
+  require('../../../svg/cute/proud.svg'),
+  require('../../../svg/cute/shy.svg'),
+  require('../../../svg/cute/sweat.svg'),
+  require('../../../svg/cute/think.svg'),
+]
+&nbsp;
+const IcoPage <span class="cstat-no" title="statement not covered" >= () =&gt; (<span class="fstat-no" title="function not covered" >&lt;div cla</span>ssN<span class="cstat-no" title="statement not covered" >ame="content-inner"&gt;</span></span>
+  &lt;Icon type="star-oo" /&gt;
+  &lt;h2 style={{ margin: '16px 0' }}&gt;Colorful Icon&lt;/h2&gt;
+  &lt;ul className={styles.list}&gt;
+    {colorfulIcons.map(i<span class="fstat-no" title="function not covered" >te</span>m =&gt; (&lt;li key={<span class="cstat-no" title="statement not covered" >item}&gt;</span>
+      &lt;Iconfont className={styles.icon} colorful type={item} /&gt;
+      &lt;span className={styles.name}&gt;{item}&lt;/span&gt;
+    &lt;/li&gt;))}
+  &lt;/ul&gt;
+  &lt;h2 style={{ margin: '16px 0' }}&gt;Flat Icon&lt;/h2&gt;
+  &lt;ul className={styles.list}&gt;
+    {flatIcons.map(i<span class="fstat-no" title="function not covered" >te</span>m =&gt; (&lt;li key={<span class="cstat-no" title="statement not covered" >item}&gt;</span>
+      &lt;Iconfont className={styles.icon} type={item} /&gt;
+      &lt;span className={styles.name}&gt;{item}&lt;/span&gt;
+    &lt;/li&gt;))}
+  &lt;/ul&gt;
+  &lt;h2 style={{ margin: '16px 0' }}&gt;Local SVG&lt;/h2&gt;
+  &lt;ul className={styles.list}&gt;
+    {localSVGIcons.map(i<span class="fstat-no" title="function not covered" >te</span>m =&gt; (&lt;li key={<span class="cstat-no" title="statement not covered" >item}&gt;</span>
+      &lt;Iconfont className={styles.icon} colorful type={item} /&gt;
+      &lt;span className={styles.name}&gt;{item}&lt;/span&gt;
+    &lt;/li&gt;))}
+  &lt;/ul&gt;
+  &lt;h2 style={{ margin: '16px 0' }}&gt;Local Require SVG&lt;/h2&gt;
+  &lt;ul className={styles.list}&gt;
+    {localRequireSVGIcons.map(i<span class="fstat-no" title="function not covered" >te</span>m =&gt; (&lt;li key={<span class="cstat-no" title="statement not covered" >item.default.id}&gt;</span>
+      &lt;Iconfont className={styles.icon} colorful type={item.default.id} /&gt;
+      &lt;span className={styles.name}&gt;{item.default.id}&lt;/span&gt;
+    &lt;/li&gt;))}
+  &lt;/ul&gt;
+  &lt;h2 style={{ margin: '16px 0' }}&gt;API&lt;/h2&gt;
+  &lt;Row&gt;
+    &lt;Col lg={18} md={24}&gt;
+      &lt;Table
+        rowKey={(record, ke<span class="fstat-no" title="function not covered" >y) =&gt; k</span>ey}<span class="cstat-no" title="statement not covered" ></span>
+        pagination={false}
+        bordered
+        scroll={{ x: 800 }}
+        columns={[
+          {
+            title: 'Property',
+            dataIndex: 'props',
+          },
+          {
+            title: 'Description',
+            dataIndex: 'desciption',
+          },
+          {
+            title: 'Type',
+            dataIndex: 'type',
+          },
+          {
+            title: 'Default',
+            dataIndex: 'default',
+          },
+        ]}
+        dataSource={[
+          {
+            props: 'type',
+            desciption: 'icon type',
+            type: 'String',
+            default: '-',
+          },
+          {
+            props: 'colorful',
+            desciption: "to set the SVG has 'symbol element'",
+            type: 'Bool',
+            default: 'false',
+          }]}
+      /&gt;
+    &lt;/Col&gt;
+  &lt;/Row&gt;
+  &lt;h2 style={{ margin: '16px 0' }}&gt;Thanks&lt;/h2&gt;
+  &lt;div style={{ margin: '16px 0', lineHeight: 2 }}&gt;
+    &lt;p&gt;
+      &lt;a href="http://www.iconfont.cn/user/detail?uid=116813"&gt;何阿酥&lt;/a&gt; colorful fruit icon
+      &lt;a href="http://www.iconfont.cn/collections/detail?cid=4014" target="_blank" rel="noopener noreferrer"&gt; http://www.iconfont.cn/collections/detail?cid=4014&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href="http://www.iconfont.cn/user/detail?uid=496384"&gt;ColinXu&lt;/a&gt; colorful &amp;apos;tsundere&amp;apos; emoji icon
+      &lt;a href="http://www.iconfont.cn/collections/detail?cid=4116" target="_blank" rel="noopener noreferrer"&gt; http://www.iconfont.cn/collections/detail?cid=4116&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href="http://www.iconfont.cn/user/detail?uid=116813"&gt;咕噜小莫莫&lt;/a&gt; colorful &amp;apos;face cute&amp;apos; emoji icon
+      &lt;a href="http://www.iconfont.cn/collections/detail?cid=4268" target="_blank" rel="noopener noreferrer"&gt; http://www.iconfont.cn/collections/detail?cid=4268&lt;/a&gt;<span class="cstat-no" title="statement not covered" ></span>
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;)
+&nbsp;
+export default IcoPage
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 15 2017 15:08:56 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>
