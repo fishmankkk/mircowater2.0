@@ -71,6 +71,7 @@ module.exports = (webpackConfig, env) => {
     routes: `${__dirname}/src/routes`,
     themes: `${__dirname}/src/themes`,
     gobal: `${__dirname}/src/gobal`,
+    containers: `${__dirname}/src/containers`,
   }
 
   return webpackConfig
