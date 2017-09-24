@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col, Form, Input, DatePicker, Select, Button, Icon, Cascader } from 'antd'
-// import moment from 'moment'
+import moment from 'moment'
 import 'gobal'
 import styles from './TableFilter.less'
 
@@ -35,8 +35,16 @@ class TableFilter extends Component {
         }
       </FormItem>)
     } else if (item.formType === 'rangePicker') {
+      let initVal = {}
+      if (this.props.filterDefaultValue[item.key]) {
+        if (this.props.filterDefaultValue[item.key].length === 2) {
+          initVal = { initialValue: [
+            moment(this.props.filterDefaultValue[item.key][0], 'YYYY/MM/DD'),
+            moment(this.props.filterDefaultValue[item.key][1], 'YYYY/MM/DD')] }
+        }
+      }
       formItemDom = (<FormItem label={item.text} className={styles.formitem_inline_bottom} key={key}>
-        { getFieldDecorator(item.key)(
+        { getFieldDecorator(item.key, initVal)(
           <RangePicker
             format={'YYYY/MM/DD'}
           />)

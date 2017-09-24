@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Form, Input, DatePicker, Select, Modal, Icon, Cascader } from 'antd'
+import moment from 'moment';
 import 'gobal'
 
 const { RangePicker } = DatePicker
@@ -22,8 +23,8 @@ class TableFilter extends Component {
     let formItemDom = ''
     if (item.formType === 'input') {
       formItemDom = (<FormItem label={item.text} key={key}>
-        { getFieldDecorator(item.key, { rules: item.rules }, { initialValue: this.props.filterDefaultValue[item.key] })(
-          <Input placeholder={item.placeholder} />)
+        { getFieldDecorator(item.key, { rules: item.rules, initialValue: this.props.filterDefaultValue[item.key] })(
+          <Input placeholder={item.placeholder} disabled={item.disabled} />)
         }
       </FormItem>)
     } else if (item.formType === 'rangePicker') {
@@ -34,13 +35,22 @@ class TableFilter extends Component {
           />)
         }
       </FormItem>)
+    } else if (item.formType === 'dateTimePicker') {
+      console.log(this.props.filterDefaultValue[item.key])
+      formItemDom = (<FormItem label={item.text} key={key}>
+        { getFieldDecorator(item.key, { rules: item.rules, initialValue: moment(this.props.filterDefaultValue[item.key], 'YYYY/MM/DD HH:mm:ss') })(
+          <DatePicker
+            format={'YYYY/MM/DD HH:mm:ss'}
+          />)
+        }
+      </FormItem>)
     } else if (item.formType === 'select') {
       const optionDom = item.option.map((optionItem, optionKey) => (
         <Option value={optionItem.value} key={optionKey}>{optionItem.label}</Option>
       ))
       if (this.props.filterDefaultValue[item.key] === '' || this.props.filterDefaultValue[item.key] === null) this.props.filterDefaultValue[item.key] = undefined
       formItemDom = (<FormItem label={item.text} key={key}>
-        { getFieldDecorator(item.key, { rules: item.rules }, { initialValue: this.props.filterDefaultValue[item.key] })(
+        { getFieldDecorator(item.key, { rules: item.rules, initialValue: this.props.filterDefaultValue[item.key] })(
           <Select
             showSearch
             placeholder={item.placeholder}
@@ -53,7 +63,7 @@ class TableFilter extends Component {
       </FormItem>)
     } else if (item.formType === 'cascader') {
       formItemDom = (<FormItem label={item.text} key={key}>
-        { getFieldDecorator(item.key, { rules: item.rules }, { initialValue: this.props.filterDefaultValue[item.key] })(
+        { getFieldDecorator(item.key, { rules: item.rules, initialValue: this.props.filterDefaultValue[item.key] })(
           <Cascader options={item.option} />)
         }
       </FormItem>)
@@ -63,9 +73,8 @@ class TableFilter extends Component {
   // form提交事件
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.form.validateFieldsAndScroll((err, values) => {
+    this.props.form.validateFieldsAndScroll((err) => {
       if (!err) {
-        console.log('Received values of form: ', values)
         this.props.onSureClickFunc(this.getFormValue())
       }
     })

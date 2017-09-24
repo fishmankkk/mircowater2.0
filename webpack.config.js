@@ -35,10 +35,12 @@ module.exports = (webpackConfig, env) => {
         to: env === 'production' ? '../' : webpackConfig.output.outputPath,
       },
     ]),
+
     new HtmlWebpackPlugin({
       hash: true,
       mobile: true,
       title: 'MICROWATER',
+      proxyApiName: '/sms',
       inject: false,
       appMountId: 'root',
       template: `!!ejs-loader!${HtmlWebpackTemplate}`,

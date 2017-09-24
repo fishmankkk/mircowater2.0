@@ -4,6 +4,7 @@ const PROXYAPI = 'proxyapi'
 
 module.exports = {
   name: 'microwater',
+  proxyApiName: '/MWater',
   prefix: 'antdAdmin',
   footerText: 'MICROWATER  © 2017 fishman',
   logo: '/logo.png',
@@ -27,6 +28,7 @@ module.exports = {
     smsDashboard: `${APIV1}/sms-dashboard`,
     smsDashboardTableFilter: `${APIV1}/sms-dashboard-tablefilter`,
     smsDashboardNewAutograph: `${APIV1}/sms-dashboard-newAutograph`,
+    smsDashboardAutograph: `${APIV1}/sms-dashboard-autograph`,
     menus: `${APIV1}/menus`,
     weather: `${APIV1}/weather`,
     v1test: `${APIV1}/test`,

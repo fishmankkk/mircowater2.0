@@ -28,7 +28,12 @@ export default {
       "target": "http://www.easy-mock.com/",
       "changeOrigin": true,
       "pathRewrite": { "^/proxyapi" : "/" }
-    }
+    },
+    "/MWater": {
+      "target": "http://172.16.23.192:8068/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/MWater" : "/" }
+    },
   },
   env : {
     development: {

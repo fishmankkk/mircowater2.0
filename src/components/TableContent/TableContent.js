@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PureRenderMixin from 'react-addons-pure-render-mixin'
 import PropTypes from 'prop-types'
 import { Table, Modal } from 'antd'
 import styles from './TableContent.less'
@@ -7,10 +8,16 @@ import styles from './TableContent.less'
 class TableContent extends Component {
   constructor (props) {
     super(props)
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.state = {
       columns: [],
+      data: [],
       tableRenderFlag: true,
+      hasEditFlag: true,
     }
+  }
+  onChangeTable = (pagination, filters, sorter) => {
+    this.props.onChangeTable(pagination, filters, sorter)
   }
   getEditDom = (item, key, index, record) => {
     const tableEditDom = []
@@ -37,7 +44,6 @@ class TableContent extends Component {
     })
   }
   editCol = (index, record) => {
-    console.log(index, record)
     this.props.editColFunc(index, record)
   }
   // 编辑按钮
@@ -48,25 +54,32 @@ class TableContent extends Component {
     return editDom
   }
   rebuildCol = (col, operation) => {
-    col.push({
-      title: '编辑',
-      dataIndex: 'operation',
-      render: (text, record, index) => {
-        return (this.addOperationCol(operation, index, record))
-      },
-    })
-    this.state.columns = col
+    const flag = col.filter(item => (
+      item.title === '编辑'
+    ))
+    if (flag.length === 0) {
+      col.push({
+        title: '编辑',
+        dataIndex: 'operation',
+        render: (text, record, index) => {
+          return (this.addOperationCol(operation, index, record))
+        },
+      })
+      this.state.columns = col
+    }
   }
   render () {
     const columns = this.props.columns
     const operation = this.props.operation
-    if (columns.length > 0 && operation.length !== 0 && this.state.tableRenderFlag) {
+    if (operation) {
       this.rebuildCol(columns, this.props.operation)
-      this.state.tableRenderFlag = false
+    } else {
+      this.state.columns = this.props.columns
     }
+    this.state.data = this.props.data
     return (
       <div className={styles.tablecontent}>
-        <Table columns={this.state.columns} rowKey={(record, key) => key} dataSource={this.props.data} pagination={{ pageSize: 5 }} />
+        <Table columns={this.state.columns} rowKey={(record, key) => key} dataSource={this.state.data} pagination={{ pageSize: 5 }} onChange={this.onChangeTable} />
       </div>
     )
   }
@@ -78,6 +91,7 @@ TableContent.propTypes = {
   operation: PropTypes.array,
   delectColFunc: PropTypes.func,
   editColFunc: PropTypes.func,
+  onChangeTable: PropTypes.func,
 }
 
 export default TableContent

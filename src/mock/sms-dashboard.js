@@ -4,7 +4,7 @@ const config = require('../utils/config')
 const { apiPrefix } = config
 
 const Dashboard = Mock.mock({
-  'smsAccountTableData|12': [
+  'smsAccountTableData|20': [
     {
       'id|+1': 1,
       name: '@last',
@@ -49,6 +49,37 @@ const Dashboard = Mock.mock({
   ],
 })
 
+const Autograph = Mock.mock({
+  'smsAutographTableData|12': [
+    {
+      'id|+1': 1,
+      name: '@last',
+      'status|1000-4000': 1,
+      date () {
+        return `${Mock.Random.integer(2015, 2016)}-${Mock.Random.date('MM-dd')} ${Mock.Random.time('HH:mm:ss')}`
+      },
+      signKey () {
+        return `${Mock.Random.region()}申通`
+      },
+    },
+  ],
+  smsAutographTableCol: [
+    {
+      title: '帐号',
+      dataIndex: 'name',
+    }, {
+      title: '剩余条数',
+      dataIndex: 'status',
+    }, {
+      title: '日期',
+      dataIndex: 'date',
+    }, {
+      title: '签名',
+      dataIndex: 'signKey',
+    },
+  ],
+})
+
 const tableFilter = Mock.mock({
   tableFilterDataVal: {
     username: '测试',
@@ -65,12 +96,6 @@ const tableFilter = Mock.mock({
       formType: 'input',
     },
     {
-      key: 'signName',
-      text: '签名',
-      placeholder: '请输入要搜索的签名',
-      formType: 'input',
-    },
-    {
       key: 'data',
       text: '日期',
       placeholder: '请输入帐号',
@@ -81,7 +106,7 @@ const tableFilter = Mock.mock({
       text: '签名',
       placeholder: '请选择的签名',
       formType: 'select',
-      styles: { width: 200 },
+      styles: { width: 180 },
       option: [{
         label: '华南申通',
         value: 'hn',
@@ -180,5 +205,8 @@ module.exports = {
   },
   [`GET ${apiPrefix}/sms-dashboard-newAutograph`] (req, res) {
     res.json(smsNewAutograph)
+  },
+  [`GET ${apiPrefix}/sms-dashboard-autograph`] (req, res) {
+    res.json(Autograph)
   },
 }
