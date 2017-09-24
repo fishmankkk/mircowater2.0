@@ -17,9 +17,10 @@ const bodyStyle = {
 }
 function SMSDashboard ({ smsDashboard, loading, dispatch }) {
   // 表单查询事件
-  function tableFilterClick (object, string) {
-    console.log(object)
-    console.log(string)
+  function getTableAllFilter (page, data, type) {
+    console.log(page)
+    console.log(data)
+    console.log(type)
     dispatch({ type: 'smsDashboard/queryAccountGird' })
   }
   function delectColFunc (index, record) {
@@ -100,10 +101,10 @@ function SMSDashboard ({ smsDashboard, loading, dispatch }) {
             <Card loading={smsAccountTableLoading} title="短信剩余条数" bordered={false} {...bodyStyle} className="m_water_margin-lg-t">
               <MwaterTable
                 filterData={tableFilterData}
-                onClickFunc={tableFilterClick}
                 filterDefaultValue={tableFilterDataVal}
                 tableColumns={smsAccountTableCol}
                 tableData={smsAccountTableData}
+                getTableAllFilter={getTableAllFilter}
               />
             </Card>
           </Spin>
@@ -127,13 +128,13 @@ function SMSDashboard ({ smsDashboard, loading, dispatch }) {
       >
         <MwaterTable
           filterData={tableFilterData}
-          onClickFunc={tableFilterClick}
           delectColFunc={delectColFunc}
           editColFunc={editColFunc}
           filterDefaultValue={tableFilterDataVal}
           tableColumns={smsAutographTableCol}
           tableData={smsAutographTableData}
           tableDataOperation={tableDataOperation}
+          getTableAllFilter={getTableAllFilter}
         />
       </Modal>
     </div>

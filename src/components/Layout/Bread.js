@@ -4,15 +4,18 @@ import PropTypes from 'prop-types'
 import { Breadcrumb, Icon } from 'antd'
 import { Link } from 'dva/router'
 import pathToRegexp from 'path-to-regexp'
-import { queryArray } from 'utils'
+import { queryArray, config } from 'utils'
 import styles from './Bread.less'
+
+const { defaultPage } = config
 
 const Bread = ({ menu }) => {
   // 匹配当前路由
   let pathArray = []
   let current
+  let router = (location.pathname === '/' ) ? defaultPage : location.pathname
   for (let index in menu) {
-    if (menu[index].route && pathToRegexp(menu[index].route).exec(location.pathname)) {
+    if (menu[index].route && pathToRegexp(menu[index].route).exec(router)) {
       current = menu[index]
       break
     }
@@ -24,7 +27,6 @@ const Bread = ({ menu }) => {
       getPathArray(queryArray(menu, item.bpid, 'id'))
     }
   }
-
   if (!current) {
     pathArray.push(menu[0] || {
       id: 1,

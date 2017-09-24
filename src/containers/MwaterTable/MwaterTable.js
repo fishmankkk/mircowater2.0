@@ -16,15 +16,28 @@ class MwaterTable extends Component {
       },
     }
   }
+  onClickFunc = (data, type) => {
+    let pagination = {
+      pageSize: this.refs.tableContentRef.state.pageSize,
+      currentPage: this.refs.tableContentRef.state.currentPage,
+    }
+    this.props.getTableAllFilter(pagination, data, type)
+  }
   onChangeTable = (pagination, filters, sorter) => {
-    console.log(pagination)
-    this.props.onChangeTable(pagination, filters, sorter)
+    this.props.getTableAllFilter(pagination, this.tableFilter.getFormValue(), 'changePage')
   }
   render () {
     return (
       <div className="mwater-table">
-        <TableFilter filterData={this.props.filterData} onClickFunc={this.props.onClickFunc} filterDefaultValue={this.props.filterDefaultValue} />
-        <TableContent delectColFunc={this.props.delectColFunc}
+        <TableFilter
+          wrappedComponentRef={(inst) => this.tableFilter = inst}
+          filterData={this.props.filterData}
+          onClickFunc={this.onClickFunc}
+          filterDefaultValue={this.props.filterDefaultValue}
+        />
+        <TableContent ref="tableContentRef"
+          wrappedComponentRef={(inst) => this.tableContentRef = inst}
+          delectColFunc={this.props.delectColFunc}
           editColFunc={this.props.editColFunc}
           data={this.props.tableData}
           columns={this.props.tableColumns}
@@ -46,6 +59,7 @@ MwaterTable.propTypes = {
   onChangeTable: PropTypes.func,
   delectColFunc: PropTypes.func,
   editColFunc: PropTypes.func,
+  getTableAllFilter: PropTypes.func,
 }
 
 export default MwaterTable

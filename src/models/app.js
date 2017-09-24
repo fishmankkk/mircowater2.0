@@ -8,7 +8,7 @@ import { EnumRoleType } from 'enums'
 import { query, signoutApi } from 'services/app'
 import * as menusService from 'services/menus'
 
-const { prefix } = config
+const { prefix, defaultPage } = config
 
 export default {
   namespace: 'app',
@@ -22,7 +22,7 @@ export default {
         id: 1,
         icon: 'laptop',
         name: 'Dashboard',
-        router: '/dashboard',
+        router: defaultPage,
       },
     ],
     menuPopoverVisible: false,
@@ -86,7 +86,7 @@ export default {
           },
         })
         if (location.pathname === '/login') {
-          yield put(routerRedux.push('/dashboard'))
+          yield put(routerRedux.push(defaultPage))
         }
       } else if (config.openPages && config.openPages.indexOf(location.pathname) < 0) {
         let from = location.pathname

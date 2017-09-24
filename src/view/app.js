@@ -11,7 +11,7 @@ import '../themes/index.less'
 import './app.less'
 import Error from './error'
 
-const { prefix, openPages } = config
+const { prefix, openPages, defaultPage } = config
 
 const { Header, Bread, Footer, Sider, styles } = Layout
 let lastHref
@@ -20,9 +20,11 @@ const App = ({ children, dispatch, app, loading, location }) => {
   const { user, siderFold, darkTheme, isNavbar, menuPopoverVisible, navOpenKeys, menu, permissions } = app
   let { pathname } = location
   pathname = pathname.startsWith('/') ? pathname : `/${pathname}`
+  pathname = (pathname === '/' ) ? defaultPage : pathname
   const { iconFontJS, iconFontCSS, logoicon } = config
   const current = menu.filter(item => pathToRegexp(item.route || '').exec(pathname))
   const hasPermission = current.length ? permissions.visit.includes(current[0].id) : false
+
   const href = window.location.href
 
   if (lastHref !== href) {

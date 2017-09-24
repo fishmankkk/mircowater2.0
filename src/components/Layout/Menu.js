@@ -3,8 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Menu, Icon } from 'antd'
 import { Link } from 'dva/router'
-import { arrayToTree, queryArray } from 'utils'
+import { arrayToTree, queryArray, config } from 'utils'
 import pathToRegexp from 'path-to-regexp'
+
+const { defaultPage } = config
 
 const Menus = ({ siderFold, darkTheme, handleClickNavMenu, navOpenKeys, changeOpenKeys, menu }) => {
   // 生成树状
@@ -80,10 +82,12 @@ const Menus = ({ siderFold, darkTheme, handleClickNavMenu, navOpenKeys, changeOp
 
 
   // 寻找选中路由
+  console.log(currentMenu)
   let currentMenu
   let defaultSelectedKeys
+  let router = (location.pathname === '/' ) ? defaultPage : location.pathname
   for (let item of menu) {
-    if (item.route && pathToRegexp(item.route).exec(location.pathname)) {
+    if (item.route && pathToRegexp(item.route).exec(router)) {
       currentMenu = item
       break
     }

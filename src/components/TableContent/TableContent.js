@@ -12,12 +12,23 @@ class TableContent extends Component {
     this.state = {
       columns: [],
       data: [],
+      pageSize: 5,
+      currentPage: 1,
       tableRenderFlag: true,
       hasEditFlag: true,
     }
   }
   onChangeTable = (pagination, filters, sorter) => {
+    this.state.pageSize = pagination.pageSize
+    this.state.currentPage = pagination.current
     this.props.onChangeTable(pagination, filters, sorter)
+  }
+  getTableNewState = () => {
+    let pagination = {
+      pageSize: this.state.pageSize,
+      currentPage: this.state.currentPage,
+    }
+    this.props.onChangeTable(pagination)
   }
   getEditDom = (item, key, index, record) => {
     const tableEditDom = []
@@ -79,7 +90,7 @@ class TableContent extends Component {
     this.state.data = this.props.data
     return (
       <div className={styles.tablecontent}>
-        <Table columns={this.state.columns} rowKey={(record, key) => key} dataSource={this.state.data} pagination={{ pageSize: 5 }} onChange={this.onChangeTable} />
+        <Table columns={this.state.columns} rowKey={(record, key) => key} dataSource={this.state.data} pagination={{ pageSize: this.state.pageSize }} onChange={this.onChangeTable} />
       </div>
     )
   }

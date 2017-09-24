@@ -14,11 +14,17 @@ const Routers = function ({ history, app }) {
     {
       path: '/',
       component: App,
+      // getIndexRoute (nextState, cb) {
+      //   require.ensure([], (require) => {
+      //     registerModel(app, require('models/dashboard'))
+      //     cb(null, { component: require('view/dashboard/') })
+      //   }, 'dashboard')
+      // },
       getIndexRoute (nextState, cb) {
         require.ensure([], (require) => {
-          registerModel(app, require('models/dashboard'))
-          cb(null, { component: require('view/dashboard/') })
-        }, 'dashboard')
+          registerModel(app, require('models/sms-dashboard'))
+          cb(null, { component: require('view/sms/sms-dashboard/') })
+        }, 'sms-dashboard')
       },
       childRoutes: [
         {

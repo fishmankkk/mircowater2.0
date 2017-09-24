@@ -3,9 +3,10 @@ const APIV2 = '/api/v2'
 const PROXYAPI = 'proxyapi'
 
 module.exports = {
+  defaultPage: '/sms/sms-dashboard',
   name: 'microwater',
   proxyApiName: '/MWater',
-  prefix: 'antdAdmin',
+  prefix: 'MWater',
   footerText: 'MICROWATER  © 2017 fishman',
   logo: '/logo.png',
   logoicon: 'favicon.ico',
